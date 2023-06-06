@@ -1,0 +1,158 @@
+:root {
+  --color-btn-primary-background: hsl(var(--color-base-hue), 100%, 83%);
+  --color-btn-primary-background-dark: hsl(var(--color-base-hue), 100%, 73%);
+  --color-btn-primary-text: hsl(var(--color-base-hue), 100%, 20%);
+  --color-btn-primary-text-dark: hsl(var(--color-base-hue), 100%, 10%);
+  --color-btn-border: black;
+  --color-btn-danger-background: hsl(var(--color-danger-hue), 100%, 83%);
+  --color-btn-danger-background-dark: hsl(var(--color-danger-hue), 100%, 73%);
+  --color-btn-danger-text: black;
+  --color-btn-danger-text-dark: black;
+}
+
+.btn {
+  border: 1px solid var(--color-btn-border);
+  border-radius: .5rem;
+  padding: .3rem .8rem;
+  font-size: 1rem;
+  font-family: 'Calibri', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  margin-top: 1rem; /* Add some top margin */
+}
+
+.btn-row > * {
+  margin-left: 1rem;
+}
+
+.btn-row > *:first-child {
+  margin-left: 0;
+}
+
+.btn-primary {
+  color: var(--color-btn-primary-text);
+  background-color: var(--color-btn-primary-background);
+}
+
+.btn-primary:hover {
+  color: var(--color-btn-primary-text-dark);
+  background-color: var(--color-btn-primary-background-dark);
+}
+
+.btn-danger {
+  color: var(--color-btn-danger-text);
+  background-color: var(--color-btn-danger-background);
+  font-weight: bold;
+}
+
+.btn-danger:hover {
+  color: var(--color-btn-danger-text-dark);
+  background-color: var(--color-btn-danger-background-dark);
+}
+
+:root {
+  --form-label-font-size: 14px;
+  --form-input-background-color: #1a73e8;
+  --form-input-border-color: #4285f4;
+  --form-input-border-color-light: #e0e0e0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-box {
+  width: 320px;
+  padding: 16px;
+  background-color: black;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  max-height: 400px; /* Set a maximum height */
+}
+
+.form-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.form-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.form-item:first-child {
+  margin-left: 0;
+}
+
+.form-item-no-grow {
+  flex-grow: 0;
+}
+
+.form-item > label {
+  font-size: var(--form-label-font-size);
+  margin-bottom: 6px;
+  margin-left: 4px;
+}
+
+.form-item input,
+.form-item select,
+.form-item textarea {
+  height: 24px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--form-input-border-color);
+  background-color: var(--form-input-background-color);
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: 'Calibri', sans-serif;
+  outline: none;
+}
+
+.form-item textarea {
+  height: 100%;
+  resize: none;
+}
+
+.form-item select option {
+  background-color: black;
+}
+
+.form-item input:focus,
+.form-item select:focus,
+.form-item textarea:focus {
+  border-color: var(--form-input-border-color-light);
+}
+
+.filepond--root {
+  font-family: 'Calibri', sans-serif;
+  margin-bottom: 0;
+}
+
+.filepond--panel-root {
+  background-color: var(--form-input-background-color);
+  border: 1px solid var(--form-input-border-color);
+}
+
+.filepond--drop-label {
+  color: #fff;
+  font-size: inherit;
+}

@@ -1,0 +1,54 @@
+<div style="margin-bottom: -100px" class="container">
+  <div class="form-box">
+    <h2 class="form-title">New User</h2>
+    <div class="form_fields">
+      <div class="form-row">
+        <div class="form-item">
+          <label>Name</label>
+          <input type="text" name="name" value="<%= user.name %>" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-item">
+          <label>Role</label>
+          <input type="text" name="role" value="<%= user.role %>" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-item">
+          <label>Email</label>
+          <input type="text" name="email" value="<%= user.email %>" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-item">
+          <label>Password</label>
+          <input type="text" name="password" value="<%= user.password %>" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-item">
+          <% if (user.coverImage) { %>
+          <label>Existing Profile Picture</label>
+          <img
+            class="user-cover"
+            src="data:image/jpeg;base64,<%= user.coverImage %>"
+          />
+          <% } %>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-item">
+          <!-- File input field for choosing a new image -->
+          <label>New Profile Picture</label>
+          <input type="file" name="coverImage" class="filepond book-cover" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

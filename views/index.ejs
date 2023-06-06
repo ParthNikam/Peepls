@@ -1,0 +1,23 @@
+<h2 class="page-header">Search users</h2>
+<form action="/users" method="GET">
+  <div class="form-row">
+    <div class="form-item">
+      <label>Name</label>
+      <input type="text" name="name" >
+    </div>
+  </div>
+  <div class="form-row form-row-end">
+    <button class="btn btn-primary" type="submit">Search</button>
+  </div>
+</form>
+<br>
+<% users.forEach(user => { %>
+  <div style="line-height: 30px" class="user-row">
+    <a href="/users/<%= user.id %>">
+      <div class="user-name-role">
+        <div class="user-name"><%= user.name %></div>
+        <div class="user-role"><%= user.role %></div>
+      </div>
+    </a>
+  </div>
+<% }) %>

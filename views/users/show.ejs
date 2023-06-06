@@ -1,0 +1,22 @@
+<h2 class="page-header">User Info</h2>
+
+<div class="user-details">
+  <div>
+    <img class="user-cover" src="data:image/jpeg;base64,<%= user.coverImage %>">
+    <div class="user-details-btn-grid">
+      <a class="btn btn-primary" href="/users/<%= user.id %>/edit">Edit</a>
+      <%- include('../partials/deleteForm', { url: `/users/${user.id}`}) %>
+    </div>
+  </div>
+  
+  <div class="user-details-grid">
+    <div class="user-details-label">Name :</div>
+    <div><%= user.name %></div>
+
+    <div class="user-details-label">Role :</div>
+    <div><%= user.role %></div>
+    
+    <div class="user-details-label">Email :</div>
+    <div><%= user.email %></div>
+  </div>
+</div>

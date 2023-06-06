@@ -1,0 +1,14 @@
+<% userCoverClass = locals.large ? 'user-cover-large' : 'user-cover'%>
+<% userGridClass = locals.large ? 'user-grid-large' : ''%>
+
+
+<div class="user-grid <%= userGridClass %>">
+  <% users.forEach(user => { %>
+    <div>
+      <a class="user-name-text" href="/users/<%= user.id %>">
+        <img class="user-display" src="data:image/jpeg;base64,<%= user.coverImage %>" />
+        <span><%= user.name %></span>
+      </a>
+    </div>
+  <% }) %>
+</div>
